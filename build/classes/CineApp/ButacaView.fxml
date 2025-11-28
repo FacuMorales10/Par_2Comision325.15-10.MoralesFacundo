@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+
+<VBox fx:controller="CineApp.ButacaController"
+      xmlns:fx="http://javafx.com/fxml/1"
+      prefHeight="700.0" prefWidth="900.0"
+      alignment="TOP_CENTER"
+      spacing="15">
+    
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+    
+    <Label fx:id="lblPeliculaTitulo" style="-fx-font: 24px Tahoma; -fx-padding: 0 0 10 0;"/>
+    <Label text="Seleccione sus asientos (Verde = Libre, Amarillo = Seleccionado)"/>
+
+    <ScrollPane fitToWidth="true" fitToHeight="true" VBox.vgrow="ALWAYS">
+        <GridPane fx:id="gridButacas" 
+                  hgap="10" 
+                  vgap="10" 
+                  alignment="CENTER"
+                  style="-fx-padding: 20px; -fx-border-color: #AAAAAA; -fx-border-width: 1;">
+            </GridPane>
+    </ScrollPane>
+
+    <HBox alignment="CENTER" spacing="50" style="-fx-padding: 10 0 0 0;">
+        <Label fx:id="lblAsientosSeleccionados" text="Asientos seleccionados: 0"/>
+        <Button text="Confirmar Compra" onAction="#handleConfirmarCompra" style="-fx-font-weight: bold;"/>
+    </HBox>
+    
+</VBox>
